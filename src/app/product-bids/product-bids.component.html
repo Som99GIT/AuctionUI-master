@@ -1,0 +1,32 @@
+<div class="fluid-container">
+    <div class="row">
+        {{product.Name}}
+    </div>
+    <div class="row">
+        <div class="col" style="text-align: center;">
+            <h3>All Bids</h3>
+        </div>
+    </div>
+    <hr/>
+    <br/>
+    <div class="row">
+        <div class="col">            
+            <table class="table">
+                <tr>
+                    <th>Bid Amount</th>
+                    <th>Name</th>
+                    <th>Email Id</th>
+                    <th>Phone</th>
+                </tr>
+                <tr *ngFor="let productBid of product.productBids; index as i">
+                    <td>{{ productBid.bidAmount }}</td>
+                    <td>{{ productBid.name }}</td>
+                    <td>{{ productBid.emailId }}</td>
+                    <td>{{ productBid.phone }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
